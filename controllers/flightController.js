@@ -1,7 +1,7 @@
 const { flights } = require('../models/flightmodel')
 const { v4: uuid } = require('uuid')
 
-//Get all flight
+//Get all flights
 const getFlights = async (req, res) => {
   try {
         const Flights = flights;
