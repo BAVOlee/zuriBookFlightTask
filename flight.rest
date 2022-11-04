@@ -1,0 +1,33 @@
+@url = "http://localhost:3003/"
+
+//get all flight
+GET http://localhost:3003/flights
+
+
+//book a flight
+###
+POST http://localhost:3003/flights HTTP/1.1
+Content-Type: application/json
+
+{ 
+	"title": "flight to Spain",
+	"price": 550000
+}
+
+//get a single flight
+###
+GET http://localhost:3003/flights/2c01b99c-a9ee-48ce-80eb-94faeae498d6 HTTP/1.1
+
+//update flight
+### 
+PUT http://localhost:3003/flights/2c01b99c-a9ee-48ce-80eb-94faeae498d6 HTTP/1.1
+Content-Type: application/json
+
+{ 
+	"title": "flight to Balotelli",
+	"price": 760000
+}
+
+//delete flight
+###
+DELETE http://localhost:3003/flights/2c01b99c-a9ee-48ce-80eb-94faeae498d6 HTTP/1.1
